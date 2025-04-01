@@ -1,0 +1,85 @@
+.custom-navbar {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(to right, #4a6c8b, #7290b5);
+    padding: 15px 0;
+    z-index: 10;
+}
+
+.navbar .nav-link, .navbar .navbar-brand {
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-toggler {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: '';
+    position: absolute;
+    font-size: 17px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link::before {
+    content: '<';
+    left: -15px;
+}
+
+.nav-link::after {
+    content: '>';
+    right: -15px;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+.custom-navbar::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Slight gap below the navbar */
+    left: 50%;
+    width: 20%; /* The short line */
+    height: 1px; /* Thin separator */
+    background-color: rgba(255, 255, 255, 0.7); /* Subtle white line */
+    transform: translateX(-50%); /* Centering */
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .navbar-nav {
+        gap: 30px;
+    }
+}

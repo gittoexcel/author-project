@@ -1,0 +1,35 @@
+[
+    {
+        "titre": "Book 2",
+        "img": "https://picsum.photos/300/600",
+        "related": [
+            {
+                "about the book": "https",
+                "thought process": "https",
+                "Cover by Hello": "https",
+                "Deleted scenes": "https"
+            }
+        ],
+        "buttons": [
+            {
+                "Read": "https",
+                "Download": "action"
+            }
+        ]
+    },
+
+    {
+        "titre": "Book 3",
+        "img": "https://picsum.photos/300/600",
+        "related": [
+            {
+                "about the book": "https"
+            }
+        ],
+        "buttons": [
+            {
+                "Download": "action"
+            }
+        ]
+    }
+]

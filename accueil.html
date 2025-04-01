@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jett Blacksmith | Home</title>
+    <link rel="icon" type="image/x-icon" href="img-livres/favicon-32x32.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #2c2c2c;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero {
+            height: 500px;
+            background: linear-gradient(to right, #4a6c8b, #7290b5);
+        }
+        .hero .half {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .btn-custom {
+            background: #7290b5;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background: #7290b5;
+            transform: scale(1.15);
+        }
+        .book-section {
+            padding: 60px 0;
+        }
+        .content-section {
+            padding: 60px 0;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer {
+            color: #2c2c2c;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#"><span class="h2">Jett Blacksmith</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogue.html">catalogue</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero d-none d-md-flex">
+        <div class="half">
+            <h1 class="fw-bold">Author</h1>
+            <p class="lead">The visionary behind the art. The writer.</p>
+            <a class="btn btn-custom" href="#bioJett" onclick="toggleBioJett()">About Jett</a>
+        </div>
+        <img class=".d-sm-none" src="img-livres/ligne.png" alt="hello">
+        <div class="half">
+            <h1 class="fw-bold">EGO</h1>
+            <p class="lead">The alter ego, a reflection of creativity.</p>
+            <a class="btn btn-custom" href="#bioEgo" onclick="toggleBioEgo()">About Ego</a>
+        </div>
+    </section>
+
+    <!-- Carousel for Mobile -->
+    <div id="heroCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero">
+                    <div class="half">
+                        <h1 class="fw-bold">Author</h1>
+                        <p class="lead">The visionary behind the art. The writer.</p>
+                        <a class="btn btn-custom" href="#bioJett" onclick="toggleBioJett()">About Jett</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero">
+                    <div class="half">
+                        <h1 class="fw-bold">EGO</h1>
+                        <p class="lead">The alter ego, a reflection of creativity.</p>
+                        <a class="btn btn-custom" href="#bioEgo" onclick="toggleBioEgo()">About Ego</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+
+    
+    <!-- No Sign up Book section-->
+    <div class="container-fluid">
+        <div class="container p-5">
+            <div style="display: flex;" class="justify-content-between mb-5">
+                <div class="h2">No requierment</div>
+                <a href="catalogue.html" style="margin: auto 0px auto auto;">See free catalogue >></a>
+            </div>
+            <div class="row justify-content-around mb-5">
+                <div class="col-md-5">
+                    <div class="row mb-5">
+                        <img src="img-livres/livre-blanc.jpg" class="col-6 img rounded" style="width: 50%;" alt="Sample Art">
+                        <div class="col-6" style="display: flex; flex-direction: column;">
+                            <div class="h4">Book Title</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas?</p>
+                            <div class="mt-auto">
+                                <div class="btn btn-outline-success d-flex justify-content-center mb-2">Read</div>
+                                <a class="btn btn-outline-primary d-flex justify-content-center" href="A Dead Man - Joao F. Silva.pdf" download="A Dead Man">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-6" style="display: flex; flex-direction: column;">
+                            <div class="h4">Book Title</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas?</p>
+                            <div class="mt-auto">
+                                <div class="btn btn-outline-success d-flex justify-content-center mb-2">Read</div>
+                                <div class="btn btn-outline-primary d-flex justify-content-center">Download</div>
+                            </div>
+                        </div>
+                        <img src="img-livres/livre-blanc.jpg" class="col-6 img rounded" style="width: 50%;" alt="Sample Art">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col-md-5">
+                    <div class="row mb-5">
+                        <img src="img-livres/livre-blanc.jpg" class="col-6 img rounded" style="width: 50%;" alt="Sample Art">
+                        <div class="col-6" style="display: flex; flex-direction: column;">
+                            <div class="h4">Book Title</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas?</p>
+                            <div class="mt-auto">
+                                <div class="btn btn-outline-success d-flex justify-content-center mb-2">Read</div>
+                                <div class="btn btn-outline-primary d-flex justify-content-center">Download</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-6" style="display: flex; flex-direction: column;">
+                            <div class="h4">Book Title</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas?</p>
+                            <div class="mt-auto">
+                                <div class="btn btn-outline-success d-flex justify-content-center mb-2">Read</div>
+                                <div class="btn btn-outline-primary d-flex justify-content-center">Download</div>
+                            </div>
+                        </div>  
+                        <img src="img-livres/livre-blanc.jpg" class="col-6 img rounded" style="width: 50%;" alt="Sample Art">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Sign up Book section-->
+    <div class="containter-fluid" style="background-color: #1e2c3e; color: #c7893e;">
+        <div class="pt-5">
+            <div class="h1 text-center">Want to join?!</div>
+            <div class="row pt-5" style="margin: auto auto auto 2.5rem; padding-bottom: 3rem;">
+                <div class="col-lg-4 mb-5">
+                    <div class="row">
+                        <img src="img-livres/livre-jaune.jpg" class="col-md-6 img rounded" style="width: 50%;" alt="Sample Art">
+                        <div class="col-5" style="display: flex; flex-direction: column;">
+                            <div class="h4">Book Title</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas?</p>
+                            <div class="mt-auto">
+                                <div class="btn btn-outline-warning d-flex justify-content-center mb-2">Sign up to Read</div>
+                                <div class="btn btn-outline-primary d-flex justify-content-center">Download</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="row">
+                        <img src="img-livres/livre-jaune.jpg" class="col-md-6 img rounded" style="width: 50%;" alt="Sample Art">
+                        <div class="col-5" style="display: flex; flex-direction: column;">
+                            <div class="h4">Book Title</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas?</p>
+                            <div class="mt-auto">
+                                <div class="btn btn-outline-warning d-flex justify-content-center mb-2">Sign up to Read</div>
+                                <div class="btn btn-outline-primary d-flex justify-content-center">Download</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="row">
+                        <img src="img-livres/livre-jaune.jpg" class="col-md-6 img rounded" style="width: 50%;" alt="Sample Art">
+                        <div class="col-5" style="display: flex; flex-direction: column;">
+                            <div class="h4">Book Title</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas?</p>
+                            <div class="mt-auto">
+                                <div class="btn btn-outline-warning d-flex justify-content-center mb-2">Sign up to Read</div>
+                                <div class="btn btn-outline-primary d-flex justify-content-center">Download</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jett Section -->
+    <div class="container content-section">
+        <div id="bioJett">
+            <section class="row mb-5">
+                <div class="col-md-8">
+                    <h2 class="fw-bold p-3">Jett Black – The Cosmic Wordsmith of Darkness, Humor, and Drama</h2>
+                    <p class="p-3">Jett Black was born beneath a sky filled with swirling constellations, or so he often claims. A nomad of the imagination, he spent his early years devouring every science fiction tale he could get his hands on—from the existential dread of cyberpunk dystopias to the boundless optimism of space operas. But where others found comfort in a singular vision, Jett found an insatiable hunger to explore every corner of the genre, twisting it into forms both unexpected and electrifying. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque rerum soluta nisi! Dicta, laborum recusandae! Saepe, molestias. Ea atque eius molestiae at, hic doloribus laboriosam, tempore nisi rem eum soluta doloremque error explicabo aut minima nam harum ab non maiores ipsum nulla quas voluptates sunt nesciunt! Delectus quia sunt possimus reprehenderit error quod corporis, hic ducimus aspernatur quas laborum illo vitae deserunt officia placeat quos dicta nemo corrupti? Eaque amet animi delectus, obcaecati natus aperiam quaerat expedita veniam, recusandae aliquam voluptatem. Unde fugiat reiciendis accusamus sequi, eveniet vitae consequatur voluptas eum, est accusantium quibusdam similique veniam quo laudantium placeat odit mollitia voluptatibus ipsa atque aliquid repellat! Illo dignissimos reprehenderit repellendus asperiores! Eos quasi incidunt doloribus at vero blanditiis! Ipsum, asperiores. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis praesentium eos a magni expedita, hic exercitationem odio quis. Cum natus odio consectetur quam, harum a commodi possimus vel beatae earum soluta dolore, veniam corrupti dicta quibusdam, praesentium accusantium tempore ipsa perspiciatis fugiat ea fugit odit. Harum explicabo, illo officia assumenda ipsum in sapiente quibusdam culpa perferendis. Consectetur molestias aspernatur rerum itaque corrupti a possimus labore veritatis dolore? Expedita commodi ratione nemo, sint cum dicta sit consectetur quas nihil dolorem saepe officiis, consequatur fugiat culpa sapiente exercitationem reiciendis! Asperiores nulla commodi consequatur neque omnis suscipit praesentium id aut velit doloribus aperiam, quos, blanditiis atque ad. Nemo eaque distinctio architecto et maxime! Obcaecati sit quaerat consectetur, ipsam adipisci libero corrupti nulla sapiente ea eos impedit tempore, laboriosam delectus? Repellendus maxime culpa veniam dignissimos deserunt cupiditate itaque quas ad a natus odit nihil beatae incidunt, mollitia quam provident rem debitis, voluptate fugit aliquam!</p>
+                </div>
+                <div class="col-md-3 image-container pt-5">
+                    <img src="https://picsum.photos/500/800" class="img-fluid rounded shadow-lg" alt="Sample Art">
+                </div>
+            </section>
+            <div class="container">
+                <img src="img-livres/divider-1.png" class="d-flex mx-auto w-100" style="height: 300px;" alt="">
+            </div>
+            <section class="row pt-5 mb-5">
+                <div class="col-md-4 image-container">
+                    <img src="https://picsum.photos/300/300" class="img-fluid rounded shadow-lg" alt="Sample Art">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="fw-bold pt-5">The Architect of Sci-Fi Chaos</h2>
+                    <p class="p-3">For Jett, science fiction is more than just spaceships and futuristic tech—it's a playground of infinite possibilities. He carves paths through shadowy corridors of cosmic horror, where the void itself hungers for human souls. He crafts biting, irreverent satire, turning galaxy-spanning empires into punchlines that land harder than a meteor strike. And when the moment calls for it, he delivers soul-wrenching drama, where characters stare into the abyss of existence—and the abyss, often, cracks a smirk before swallowing them whole.</p>
+                </div>
+            </section>
+            <hr>
+            <section class="row pt-5 mb-5">
+                <div class="col-md-8">
+                    <h2 class="fw-bold">From the Void to the Page</h2>
+                    <p class="p-3">Jett’s debut novel, Black Matter, was a gritty, nightmarish vision of interstellar colonization gone wrong, blending elements of Lovecraftian horror with the eerie loneliness of deep space. It was followed by Neon Gods Laugh Last, a sharp-witted, absurdist space noir where rogue AIs and disgruntled bounty hunters exchanged both gunfire and existential jokes. But it was The Last Light of Andromeda, a tragic, deeply human tale of a dying universe, that solidified his reputation as an author capable of delivering emotionally devastating sci-fi epics.</p>
+                </div>
+                <div class="col-md-3 image-container">
+                    <img src="https://picsum.photos/300" class="img-fluid rounded shadow-lg" alt="Sample Art">
+                </div>
+            </section>
+            <hr>
+            <section class="row pt-5">
+                <div class="col-md-4 image-container">
+                    <img src="https://picsum.photos/300/" class="img-fluid rounded shadow-lg" alt="Sample Art">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="fw-bold pt-5">A Mind That Never Rests</h2>
+                    <p class="p-3">Jett Black refuses to be confined by convention. Whether he's warping reality, mocking the absurdities of humanity’s future, or ripping readers’ hearts out with raw emotional depth, his writing is always an exploration—a journey through the stars, through the darkness, and through the very essence of what it means to be human. One thing is certain: whatever Jett Black writes next, it will drag you in, make you laugh, make you shiver, and refuse to let you go.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Ego Section -->
+        <div id="bioEgo" style="display: none;">
+            <section class="row pt-5">
+                <div class="col-md-8">
+                    <h2 class="fw-bold p-3">Neos – The Wanderer of Forgotten Worlds</h2>
+                    <p class="p-3">Neos does not belong to a single world, nor does he seek one. He is a traveler of the far reaches, a figure whose boots have pressed against the dust of a thousand dying civilizations. He does not chart stars or claim planets—he simply moves through them, a specter in the ruins, an observer of glories long turned to ash.</p>
+                </div>
+                <div class="col-md-3 image-container pt-5">
+                    <img src="https://picsum.photos/300/300" class="img-fluid rounded shadow-lg" alt="Sample Art">
+                </div>
+            </section>
+
+            <section class="row pt-5">
+                <div class="col-md-4 image-container pt-5">
+                    <img src="https://picsum.photos/300" class="img-fluid rounded shadow-lg" alt="Sample Art">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="fw-bold pt-5">A Drifter Through the Infinite</h2>
+                    <p class="p-3">No world remains untouched by Neos’ gaze. He has walked through the shattered spires of Elyria-9, where the last of the dream-weavers whispered their final visions before vanishing into the void. He has stood at the edge of Varron’s Maw, a supermassive black hole where empires once cast their enemies, only to be consumed by its pull themselves. He has breathed the neon air of Omicron City, where cybernetic prophets trade in stolen memories, and laughter is nothing more than a glitch in the system. But Neos does not interfere. He watches, listens, and moves on. He is neither hero nor villain, neither savior nor destroyer. He is a witness to the rise and fall of everything.</p>
+                </div>
+            </section>
+            
+            <section class="row pt-5">
+                <div class="col-md-8">
+                    <h2 class="fw-bold p-3">The Weight of Knowledge</h2>
+                    <p class="p-3">With every world he leaves behind, Neos carries a piece of it with him. The songs of the Sirens of Orion hum beneath his skin. The echoes of lost battles flicker in the corners of his mind. The knowledge of dying gods, of collapsing suns, of creatures that should not exist but do—all of it clings to him like a shadow, stretching long and dark across the galaxies he leaves behind. And yet, he does not stop. Perhaps he is searching for something. Perhaps he is running from something. Or perhaps he simply knows there is no end to the story, only another page to turn, another world to walk before the last star burns out.</p>
+                </div>
+                <div class="col-md-3 image-container pt-5">
+                    <img src="https://picsum.photos/300/300" class="img-fluid rounded shadow-lg" alt="Sample Art">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container border-top text-center p-4">
+        <p>&copy; 2025 Jett Blacksmith. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/acceuil.js"></script>
+</body>
+</html>
